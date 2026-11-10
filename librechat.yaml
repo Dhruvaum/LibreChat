@@ -5,7 +5,7 @@ endpoints:
   custom:
     - name: "OpenRouter (Free Tier)"
       apiKey: "${OPENROUTER_KEY}"
-      baseURL: "https://openrouter.ai"
+      baseURL: "https://openrouter.ai/api/v1"
       models:
         default: ["meta-llama/llama-3.3-70b-instruct:free"]
         fetch: false # Stops the UI from hiding free models behind paid variants
