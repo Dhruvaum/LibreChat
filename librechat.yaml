@@ -3,13 +3,18 @@ cache: true
 
 endpoints:
   custom:
-    - name: "OpenRouter"
+    - name: "OpenRouter (Free Tier)"
       apiKey: "${OPENROUTER_KEY}"
-      baseURL: "https://openrouter.ai/api/v1"
+      baseURL: "https://openrouter.ai"
       models:
-        default: ["anthropic/claude-3.5-sonnet"]
-        fetch: true 
+        default: ["meta-llama/llama-3.3-70b-instruct:free"]
+        fetch: false # Stops the UI from hiding free models behind paid variants
+        list:
+          - id: "meta-llama/llama-3.3-70b-instruct:free"
+            displayName: "Llama 3.3 70B (Free - Meta USA)"
+          - id: "google/gemini-2.5-flash:free"
+            displayName: "Gemini 2.5 Flash (Free - Google USA)"
       titleConvo: true
-      titleModel: "anthropic/claude-3.5-sonnet"
+      titleModel: "meta-llama/llama-3.3-70b-instruct:free"
       dropParams: ["stop"]
       modelDisplayLabel: "OpenRouter"
