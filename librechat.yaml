@@ -5,11 +5,11 @@ endpoints:
   custom:
     - name: "OpenRouter"
       apiKey: "${OPENROUTER_KEY}"
-      baseURL: "https://openrouter.ai"
+      baseURL: "https://openrouter.ai/api/v1"
       models:
-        default: ["anthropic/claude-sonnet-5.5"]
-        fetch: true
+        default: ["anthropic/claude-3.5-sonnet"]
+        fetch: true 
       titleConvo: true
-      titleModel: "anthropic/claude-sonnet-5.5"
+      titleModel: "anthropic/claude-3.5-sonnet"
       dropParams: ["stop"]
       modelDisplayLabel: "OpenRouter"
